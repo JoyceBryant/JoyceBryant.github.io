@@ -1,0 +1,9 @@
+html, body, #app{
+    height: 100%;
+}
+body {
+    background-image: url('../../source/img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
