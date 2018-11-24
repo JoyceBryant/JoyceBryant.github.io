@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from "./component/Header.jsx";
 import styled from "styled-components";
+import animation from "./animation/animation.jsx"
 
 const Container = styled.div`
     background-color: rgba(238, 238, 238, 0.2);
@@ -14,13 +15,18 @@ const Item = styled.div`
         display: block;
     }
 `;
+
 const Text = styled.div`
     position: absolute;
     font-size: 50px;
     color: #fff;
-    top: 25%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: 3s ${animation.fadeIn} ease-out;
+`;
+const Resume = styled.embed`
+
 `;
 
 class App extends Component {
@@ -46,7 +52,7 @@ class App extends Component {
                     <Text>Welcome</Text>
                 </Item>
                 <Item className={this.state.activeId === 2 ? 'active' : ''}>
-                    <Text>Making~~~</Text>
+                    <Text>Resume</Text>
                 </Item>
             </Container>
         )
